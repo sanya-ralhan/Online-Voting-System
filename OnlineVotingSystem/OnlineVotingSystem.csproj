@@ -3,8 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{94D7F323-D733-4975-A083-C6C3840D0806}</ProjectGuid>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -12,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OnlineVotingSystem</RootNamespace>
     <AssemblyName>OnlineVotingSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -34,18 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EFCodeFirst.0.8\lib\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.WebPages" />
-    <Reference Include="System.Web.Helpers" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -59,6 +51,11 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
@@ -137,12 +134,10 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -257,5 +252,10 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
   </ProjectExtensions>
 </Project>

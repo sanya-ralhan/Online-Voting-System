@@ -1,0 +1,4 @@
+/Users/sanyaralhan/mywork/Online-Voting-System/OnlineVotingSystem/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/Users/sanyaralhan/mywork/Online-Voting-System/OnlineVotingSystem/bin/EntityFramework.SqlServer.dll
+/Users/sanyaralhan/mywork/Online-Voting-System/OnlineVotingSystem/bin/EntityFramework.dll
+/Users/sanyaralhan/mywork/Online-Voting-System/OnlineVotingSystem/bin/EntityFramework.xml
