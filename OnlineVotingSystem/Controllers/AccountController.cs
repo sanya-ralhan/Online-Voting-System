@@ -8,11 +8,16 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using OnlineVotingSystem.Models;
+using System.Threading;
+using Microsoft.ServiceBus.Messaging;
 
 namespace OnlineVotingSystem.Controllers
 {
     public class AccountController : Controller
     {
+
+		static string eventHubName = "voterseventhub";
+		static string connectionString = "Endpoint=sb://voterseventhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=az/6ZPYlup9/5tYAe+0G7SPh5qgzjfr7+oa6AsShylA=";
 
         public IFormsAuthenticationService FormsService { get; set; }
         public IMembershipService MembershipService { get; set; }
@@ -39,6 +44,10 @@ namespace OnlineVotingSystem.Controllers
         {
             if (ModelState.IsValid)
             {
+
+
+
+
                 if (MembershipService.ValidateUser(model.UserName, model.Password))
                 {
                     FormsService.SignIn(model.UserName, model.RememberMe);
